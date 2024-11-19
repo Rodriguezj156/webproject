@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Ranking Poll - GET Method</title>
+</head>
+<body>
+    <h1>Rank Our Products (GET Method)</h1>
+    <form action="results_get.php" method="get">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <h2>Product 1: Smartphone</h2>
+        <p>Would you buy this product at this price?</p>
+        <input type="radio" name="smartphone_price" value="Excellent" required /> Excellent
+        <input type="radio" name="smartphone_price" value="Good" /> Good
+        <input type="radio" name="smartphone_price" value="Average" /> Average
+        <input type="radio" name="smartphone_price" value="Poor" /> Poor
+
+        <!-- Repeat similar questions for each feature of Product 1 -->
+
+        <h2>Product 2: Laptop</h2>
+        <p>Would you buy this product at this price?</p>
+        <input type="radio" name="laptop_price" value="Excellent" required /> Excellent
+        <input type="radio" name="laptop_price" value="Good" /> Good
+        <input type="radio" name="laptop_price" value="Average" /> Average
+        <input type="radio" name="laptop_price" value="Poor" /> Poor
+
+        <!-- Repeat similar questions for each feature of Product 2 -->
+
+        <h2>Product 3: Headphones</h2>
+        <p>Would you buy this product at this price?</p>
+        <input type="radio" name="headphones_price" value="Excellent" required /> Excellent
+        <input type="radio" name="headphones_price" value="Good" /> Good
+        <input type="radio" name="headphones_price" value="Average" /> Average
+        <input type="radio" name="headphones_price" value="Poor" /> Poor
+
+        <label for="comments">Additional Comments:</label><br />
+        <textarea id="comments" name="comments"></textarea><br />
+
+        <input type="submit" value="Submit Ranking" />
+    </form>
+</body>
+</html>
