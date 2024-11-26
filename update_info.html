@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Team Member Information</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function displayUpdatedInfo() {
+            // Parse query parameters
+            const params = new URLSearchParams(window.location.search);
+
+            // Get individual data
+            const person = params.get('person') || 'Unknown';
+            const job = params.get('job') || 'Not Provided';
+            const department = params.get('department') || 'Not Provided';
+            const interests = params.get('interests') || 'Not Provided';
+            const goals = params.get('goals') || 'Not Provided';
+
+            // Update content
+            document.getElementById("person-name").textContent = person;
+            document.getElementById("job-title").textContent = job;
+            document.getElementById("department").textContent = department;
+            document.getElementById("interests").textContent = interests;
+            document.getElementById("goals").textContent = goals;
+        }
+
+        window.onload = displayUpdatedInfo;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Updated Information</h1>
+        <p>Here is the updated information for the selected team member.</p>
+    </header>
+
+    <section>
+        <h2>Team Member: <span id="person-name"></span></h2>
+        <p><strong>Job Title:</strong> <span id="job-title"></span></p>
+        <p><strong>Department:</strong> <span id="department"></span></p>
+        <p><strong>Interests:</strong> <span id="interests"></span></p>
+        <p><strong>Goals:</strong> <span id="goals"></span></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aspire Electronics. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
